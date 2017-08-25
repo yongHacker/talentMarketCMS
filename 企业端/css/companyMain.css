@@ -1,0 +1,381 @@
+/*commentCss*/
+*{ margin:0;padding:0;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+a:hover{
+    text-decoration: none;
+}
+label{
+    font-size: 12px;
+    font-weight: normal;
+}
+.container-fluid{
+    font-size: 12px;
+}
+.container-fluid h2{
+    font-size:18px;
+}
+.container-fluid h3{
+    font-size:16px;
+}
+.container-fluid h4{
+    font-size:14px;
+}
+.container-fluid h5{
+    font-size:12px;
+}
+.table button{
+    padding:5px;
+}
+/*commentCss结束*/
+
+/*侧边栏公共样式*/
+.sidebar{
+    padding:0;
+    background-color:#132140;
+}
+.sidebar a{
+    backgroud-color:#273C69;
+}
+.sidebar .nav{
+    background-color:#132140;
+    text-align:center;
+    font-weight:bold;
+}
+.sidebar .nav .index{
+    display: block;
+    padding:20px;
+    border-bottom:1px solid #273c69 ;
+    margin:0 15px 10px 15px;
+    color:#fff;
+    text-decoration:none;
+}
+.sidebar .nav {
+    margin-left:-2px;
+    text-align:center;
+    background-color:#132140;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+}
+.sidebar .nav li,
+.sidebar .nav a{
+    background-color:#132140;
+}
+.sidebar .index h5{
+    color: #fff;
+}
+.sidebar .nav li{
+    margin:20px 0;
+}
+.sidebar .nav li a{
+    color:#7182a0;
+}
+.sidebar .nav li:hover{
+    background-color: #273c69;
+    border-left:4px solid #4faaff;
+}
+.sidebar .nav li:hover a{
+    background-color: #273c69;
+}
+.sidebar .nav li.active{
+    border-left:4px solid #4faaff;
+    background-color: #273c69;
+}
+.sidebar .nav li.active a{
+    color:#fff;
+    background-color: #273c69;
+}
+.sidebar .nav li.selected{
+    border-left:4px solid #4faaff;
+    background-color: #72b8fa;
+}
+.sidebar .nav li.selected a{
+    color:#fff;
+    background-color: #72b8fa;
+}
+.sidebar .nav .open>a,
+.sidebar .nav .open>a:focus,
+.sidebar .nav .open>a:hover{
+    background-color:#132140;
+}
+.collapse li{
+    margin:4px 0;
+    background-color:#132140;
+    text-decoration: none;
+}
+.collapse li:hover{
+    background-color:#273c69;
+}
+.sidebar .collapse a{
+    display: block;
+    height:40px;
+    line-height: 40px;
+    padding:0;
+}
+.collapse a:hover{
+    background-color:#4faaff;
+}
+/*侧边栏公共样式结束*/
+
+/*header*/
+.login{
+    border-bottom: 1px solid #ccc;
+    margin-bottom:20px;
+    margin-top:10px;
+}
+.login h3{
+    margin-top:8px;
+    padding-left:40px;
+}
+.login .login-caption{
+    width:200px;
+    margin-top:10px;
+}
+.login-caption a{
+    margin-left:15px;
+}
+/*header结束*/
+
+/*table公共样式*/
+.position-filter .form .form-btn{
+    margin-top:22px;
+}
+.table{
+    border:1px solid #ececed;
+}
+.table thead{
+    background-color: #dddddd;
+}
+.table th{
+    text-align: center;
+}
+.table td{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.position-filter .check-form{
+    margin-top:20px;
+}
+.position-filter .checkbox{
+    width: 80px;
+    margin-left:15px;
+}
+.position-filter .checkbox-btn{
+    margin-right: 10px;
+}
+.calendar{
+    position:relative;
+}
+.calendar span{
+    position:absolute;
+    right:5%;
+    top:30%;
+}
+.calendar span:hover{
+    cursor:pointer;
+}
+/*table公共样式结束*/
+
+/*公共弹窗样式*/
+.modal-header{
+    background-color:#132140;
+    color:#fff;
+}
+.modal-header .glyphicon-remove{
+    color:#fff;
+}
+.modal-title{
+    text-align:center;
+}
+.modal-body{
+    padding:0;
+    padding-left:20px;
+    height:400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.modal-footer{
+    text-align: center;
+}
+.modal-body h4{
+    margin-left: 10px;
+    padding-left: 5px;
+    border-left:4px solid #56ADFF;
+    font-weight: bold;
+}
+.modal-body .row{
+    margin-bottom: 5px;
+}
+.modal-body span:nth-child(1){
+    color:#B5B5B5;
+}
+.modal-body span:nth-child(2){
+
+}
+.modal-body img{
+    margin-left: 20px;
+}
+.modal-footer .btn{
+    color: #fff;
+    padding:5px 20px;
+}
+.modal-footer .btn.pass{
+    background-color: #4F65A4;
+}
+.modal-footer .btn.fail{
+    background-color: #E45A5A;
+    padding:5px 12px;
+}
+/*公共弹窗样式结束*/
+
+/*index.html*/
+.content{
+    border: 1px solid #ccc;
+    width:100%;
+    padding:0 35px 35px;
+    -webkit-box-shadow:  2px 2px 2px #ccc;
+    -moz-box-shadow: 2px 2px 2px #ccc;
+    box-shadow: 2px 2px 2px #ccc;
+}
+.content img{
+    max-width:60px;
+}
+.company-info{
+    margin-bottom:10px;
+}
+.company-info .media-position{
+    display: inline-block;
+    width:200px;
+    margin:15px 50px;
+}
+.company-info .media-position .media-heading{
+    padding:10px 0;
+}
+.company-info .media-position span{
+    font-size: 10px;
+}
+.company-info .media-resume{
+    display: inline-block;
+    width:200px;
+    margin:15px 60px;
+}
+.company-info .media-resume .media-heading{
+    padding:10px 0;
+}
+.company-info .media-resume span{
+    font-size: 10px;
+}
+.company-info .media-body-caption{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.company-info-border{
+     border: 1px solid #e6e6e6;
+     margin-top:30px;
+     width: 60%;
+ }
+.company-info .badge{
+    font-size:8px;
+    margin-top:-10px;
+}
+/*index.html结束*/
+
+/*positionPublish.html*/
+.content .position-publish-form{
+    padding-left: 0;
+    padding-top:0;
+}
+.content .position-publish-form label{
+    font-size: 16px;
+}
+.content .position-publish-form .radio-group input{
+    margin-top:12px;
+}
+.content .position-publish-form .radio-group input:hover{
+    cursor: pointer;
+}
+.content .position-publish-form .radio-group label{
+    font-size:14px;
+    margin-right: 20px;
+}
+.form-group .nest .col-sm-2{
+    padding:0 2px;
+}
+.content .table .industry li{
+    background-color: #fff;
+}
+.table .industry a{
+    background-color: #fff;
+    color:#000;
+}
+.menu{
+
+}
+.menu a{
+    color:#fff;
+    background-color: transparent;
+}
+.menu a:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+.menu li:hover{
+    background-color: #8c8c8c;
+}
+/*positionPublish.html结束*/
+
+/*companyManagerMsg.html*/
+.tab-ul{
+    padding-bottom: 20px;
+    margin-left:10px;
+}
+.tab-content{
+    margin-left:10px;
+}
+/*companyManagerMsg.html结束*/
+
+/* companyManagerData.html*/
+.companyData .form-group h5{
+    margin-left:10px;
+    padding-right:0;
+}
+.uploadBox{
+    padding-left:40px;
+}
+.uploadBox img{
+    margin-bottom: 20px;
+}
+.uploadLogo{
+    position: relative;
+    display: inline-block;
+    background-color: #5065A4;
+    border:1px solid #5065A4;
+    border-radius:6px;
+    padding:10px 12px;
+    color:#fff;
+    text-decoration: none;
+    line-height:12px;
+}
+.uploadLogo input{
+    opacity: 0;
+    position: absolute;
+    right:0;
+    top:0;
+}
+.uploadLogo:hover{
+    background-color: #0e90d2;
+    border-color:#002a80;
+    text-decoration: none;
+}
+/* companyManagerData.html结束*/
+

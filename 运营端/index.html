@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>校园服务运营系统</title>
+    <!--引入css样式表-->
+    <link rel="icon" href="../../favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/adminMain.css">
+    <!--兼容ie9以下-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--引入js文件-->
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/adminMain.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <div class="row">
+                <a class="index" href="#">
+                    <img class="center-block" src="images/logo-small.png"  alt="">
+                    <h5 class="text-center">管理员后台管理系统</h5>
+                </a>
+                </div>
+                <li class="active"><a  href="./index.html">首页<span class="sr-only">(current)</span></a></li>
+                <li><a href="./company.html">企业管理</a></li>
+                <li><a href="./position.html">职位管理</a></li>
+                <li><a href="./resume.html">简历管理</a></li>
+                <li><a href="./comment.html">评论管理</a></li>
+                <li><a href="./recruitment.html">招聘会管理</a></li>
+            </ul>
+        </div>
+        <!--侧边栏结束-->
+        <!--内容区-->
+        <div class="col-sm-9  col-md-10  main">
+            <!--header-->
+            <div class="login row">
+                <h3 class=" col-xs-8 col-sm-10">首页</h3>
+                <div class=" col-xs-4 col-sm-2">
+                    <img class="img-responsive pull-left" src="images/icon/avatar.png" alt="头像" style="max-width:30px;">
+                    <div class="login-caption">
+                            <a href="#">admin</a>
+                            <a href="javascript:void(0);" onclick="Logout()">退出</a>
+                            <span class="glyphicon glyphicon-log-out"></span>
+                    </div>
+                </div>
+            </div>
+            <!--header结束-->
+           <!-- 内容区-panel-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    待处理任务
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="media col-xs-12 col-sm-4">
+                            <a class="media-left" href="#">
+                                <img class="media-object" src="images/icon/company.png" alt="媒体对象">
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="company.html">待处理企业</a></h3>
+                                <h3>0</h3>
+                            </div>
+                        </div>
+                        <div class="media col-xs-12 col-sm-4">
+                            <a class="media-left" href="#">
+                                <img class="media-object" src="images/icon/position.png" alt="媒体对象">
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="position.html">待处理职位</a></h3>
+                                <h3>0</h3>
+                            </div>
+                        </div>
+                        <div class="media col-xs-12 col-sm-4">
+                            <a class="media-left" href="#">
+                                <img class="media-object" src="images/icon/resume.png" alt="媒体对象">
+                            </a>
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="resume.html">待处理简历</a></h3>
+                                <h3>0</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--内容区结束-->
+    </div>
+</div>
+
+</body>
+
+</html>

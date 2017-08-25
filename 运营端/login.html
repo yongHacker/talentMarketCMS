@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="嘉讯">
+        <meta name="author" content="deng">
+        <title>运营端登录</title>
+        <link rel="icon" href="favicon.ico" />
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/log.css" />
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/jquery_1.12.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/validate/jquery.validate.min.js"></script>
+        <script src="js/validate/messages_zh.js"></script>
+        <script src="js/checkCode.js"></script>
+        <script src="js/myValidate.js"></script>
+    </head>
+    <body>
+        <!--顶部logo-->
+        <img src="images/bg.png" class="bg img-responsive" alt="">
+       <!-- 内容区-->
+        <div class="container">
+            <img src="images/logo-lg.png" class="logo img-responsive center-block" alt="" />
+            <div class="form-box center-block">
+                <form class="form-signin" id="login">
+                    <div class="form-signin-header">
+                        <span class="welcome">欢迎使用</span>
+                        <span class="text">嘉讯人才市场管理系统</span>
+                    </div>
+                    <label for="loginAccount" class="sr-only">账号</label>
+                    <input type="text" id="loginAccount" name="loginAccount" class="form-control" placeholder="请输入账号">
+
+                    <label for="loginPassword" class="sr-only">密码</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="form-control" placeholder="请输入密码">
+
+                    <label for="loginCode" class="sr-only">验证码</label>
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 ">
+                            <input type="text" id="loginCode" name="loginCode" class="form-control inputCode" placeholder="请输入验证码">
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <input type="text" onclick="createCode()" id="checkCode" class="form-control" readonly>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="remember-me"> 自动登录
+                        <a class="pull-right" href="#">忘记密码？</a>
+                    </div>
+
+                    <button class="btn btn-primary btn-block login" type="submit">立即登录</button>
+                </form>
+                <div class="register">
+                    还没有账号，<a href="./register.html">立即注册</a>
+                </div>
+            </div>           
+        </div> 
+        <!--内容区结束-->
+        <!--footer区-->
+        <div class="footer text-center">
+                <h5 >东莞市嘉讯与计算有限公司 版权所有      客服热线 400-116-6068</h5>
+        </div>
+    <!--footer区结束-->
+    </body>
+
+</html>

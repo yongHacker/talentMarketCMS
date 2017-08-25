@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>校园服务运营系统</title>
+    <!--引入css样式表-->
+    <link rel="icon" href="../../favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/adminMain.css">
+    <!--兼容ie9以下-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--引入js文件-->
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/adminMain.js"></script>
+</head>
+
+<body>
+    <!--全页面容器-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--侧边栏-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <div class="row">
+                        <a class="index" href="#">
+                            <img class="center-block" src="images/logo-small.png"  alt="">
+                            <h5 class="text-center">管理员后台管理系统</h5>
+                        </a>
+                    </div>
+                    <li><a  href="./index.html">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="./company.html">企业管理</a></li>
+                    <li class="active"><a href="./position.html">职位管理</a></li>
+                    <li><a href="./resume.html">简历管理</a></li>
+                    <li><a href="./comment.html">评论管理</a></li>
+                    <li><a href="./recruitment.html">招聘会管理</a></li>
+                </ul>
+            </div>
+           <!-- 侧边栏结束-->
+            <!--内容区-->
+            <div class="col-sm-9  col-md-10  main">
+                <!--header-->
+                <div class="login row">
+                    <h3 class=" col-xs-8 col-sm-10">首页</h3>
+                    <div class=" col-xs-4 col-sm-2">
+                        <img class="img-responsive pull-left" src="images/icon/avatar.png" alt="头像" style="max-width:30px;">
+                        <div class="login-caption">
+                            <a href="#">admin</a>
+                            <a href="javascript:void(0);" onclick="Logout()">退出</a>
+                            <span class="glyphicon glyphicon-log-out"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--header结束-->
+                <!--内容区-form-->
+                <div class="row position-filter">
+                    <!--查询区-->
+                    <form class="form" action="" role="form">
+                        <div class="form-group  col-xs-12 col-sm-2">
+                            <label for="positionName">职位名称</label>
+                            <input type="text" class="form-control" id="positionName" placeholder="请输入职位名">
+                        </div>
+                        <div class="form-group  col-xs-12 col-sm-2">
+                            <label for="companyName">公司名称</label>
+                            <input type="text" class="form-control" id="companyName" placeholder="请输入公司名">
+                        </div>
+                        <div class="form-group  col-xs-12 col-sm-2">
+                            <label for="state" class="">审核状态</label>
+                            <select class="form-control" name="" id="state">
+                                <span class="caret"></span>
+                                <option value="0">全部</option>
+                                <option value="1">已通过</option>
+                                <option value="2">未通过</option>
+                            </select>
+                        </div>
+                        <div class="form-group  col-xs-12 col-sm-2 calendarBox">
+                            <label>添加时间</label>
+                            <input size="16" type="text" value="2012-06-15" class="form_datetime form-control" id="aPositionCalendar">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-btn">查询</button>
+                    </form>
+                    <!--查询区结束-->
+                    <!--全选操作区-->
+                    <div class="row form-group check-form ">
+                    <div class="checkbox col-xs-2">
+                        <label for="pName"><input id="pName" type="checkbox">全选</label>
+                    </div>
+                    <button type="button" class="btn btn-primary checkbox-btn">操作</button>
+                    <button type="button" class="btn btn-danger checkbox-btn">操作</button>
+                    </div>
+                    <!--全选操作区结束-->
+                </div>
+                <!--内容区-form结束-->
+                <!--内容区-table-->
+                <div class="table-responsive ">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>职位名称</th>
+                            <th>发布公司</th>
+                            <th>审核状态</th>
+                            <th>添加时间</th>
+                            <th>到期时间</th>
+                            <th>更新时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><label for="p-Name0"><input  type="checkbox" id="p-Name0">java工程师 [急聘]  [推荐]  [置顶]</label></td>
+                            <td>广州网软志成信息科技有限公司 </td>
+                            <td style="color:#67affe">审核通过 </td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td><button type="button" class="btn btn-primary positionSaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                        </tr>
+                        <tr>
+                            <td><label for="p-Name1"><input  type="checkbox" id="p-Name1">java工程师 [急聘]  [推荐]  [置顶]</label></td>
+                            <td>广州网软志成信息科技有限公司 </td>
+                            <td>审核通过 </td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td><button type="button" class="btn btn-primary positionSaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                        </tr>
+                        <tr>
+                            <td><label for="p-Name2"><input  type="checkbox" id="p-Name2">java工程师 [急聘]  [推荐]  [置顶]</label></td>
+                            <td>广州网软志成信息科技有限公司 </td>
+                            <td>审核通过 </td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td><button type="button" class="btn btn-primary positionSaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                        </tr>
+                        <tr>
+                            <td><label for="p-Name3"><input  type="checkbox" id="p-Name3">java工程师 [急聘]  [推荐]  [置顶]</label></td>
+                            <td>广州网软志成信息科技有限公司 </td>
+                            <td>审核通过 </td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td>2017-07-17</td>
+                            <td><button type="button" class="btn btn-primary positionSaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--内容区-table结束-->
+                <!--内容区-分页-->
+                <div class="pagination pull-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a  href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">下一页</a></li>
+                    <li><a href="#">末页</a></li>
+                    <span>共20页，到第&nbsp;<input class="" type="number" style="width: 30px;height: 30px;"></input>&nbsp;页</span>
+                    <button class="btn btn-default">提交</button>
+                </div>
+                <!--内容区-分页结束-->
+            </div>
+            <!--内容区结束-->
+        </div>
+    </div>
+    <!--全页面容器结束-->
+    <!--modal弹窗-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">职位管理</h4>
+                </div>
+                <!--modal-body-->
+                <div class="modal-body">
+                    <div class="row info-title">
+                        <div class="col-xs-6 col-sm-6" style="border-right:1px solid #ccc;">
+                            职位名称
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            发布公司
+                        </div>
+                    </div>
+                    <div class="row info-body">
+                        <div class="col-xs-6 col-sm-6" style="border-right:1px solid #ccc;">
+                            java工程师
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            东莞市嘉讯云计算有限公司
+                        </div>
+                    </div>
+                    <div class="row info-title">
+                        <div class="col-xs-4 col-sm-4" style="border-right:1px solid #ccc;">
+                            添加时间
+                        </div>
+                        <div class="col-xs-4 col-sm-4" style="border-right:1px solid #ccc;">
+                            到期时间
+                        </div>
+                        <div class="col-xs-4 col-sm-4">
+                            更新时间
+                        </div>
+                    </div>
+                    <div class="row info-body">
+                        <div class="col-xs-4 col-sm-4" style="border-right:1px solid #ccc;">
+                            2017-8-23  23:00
+                        </div>
+                        <div class="col-xs-4 col-sm-4" style="border-right:1px solid #ccc;">
+                            2017-8-23  23:00
+                        </div>
+                        <div class="col-xs-4 col-sm-4">
+                            2017-8-23  23:00
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <span>职位性质:</span>
+                            <span>全职</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            <span>行业:</span>
+                            <span>计算机行业</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <span>招聘人数:</span>
+                            <span>3人</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            <span>薪资待遇:</span>
+                            <span>5K-7K</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <span>学历:</span>
+                            <span>本科</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            <span>工作经验:</span>
+                            <span>2年</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <span>职位标签:</span>
+                            <span>java,本科,spring</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <span>工作地点:</span>
+                            <span>广东省东莞市松山湖科技10路</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h4>岗位职责</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <span>岗位职责:</span>
+                            <span>xxxxxxxxxxxxxxxxxxXXXXxcvdafadsfadsfasdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1东莞市嘉讯云计算有限公司</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <span>岗位要求:</span>
+                            <span>xxxxxxxxxxxxxxxxxxXXXXxcvdafadsfadsfasdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1东莞市嘉讯云计算有限公司</span>
+                        </div>
+                    </div>
+                </div>
+                <!--modal-body结束-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success pass" data-dismiss="modal" onclick="Pass()">通过</button>
+                    <button type="button" class="btn btn-danger fail" data-dismiss="modal" onclick="Fail()">不通过</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal弹窗结束-->
+</body>
+
+<script>
+    $(function () {
+       $("#myModal").modal({
+           show: false,
+           backdrop: "static"
+       });
+    });
+
+    $(".positionSaw").click(function () {
+       $.ajax({
+           type: "GET",
+           async: "false",
+           url: "",
+           dataType: "json",
+           error: function (XMLHttpRequest,textStatus,errorThrown) {
+               alert("ajax获取modal数据失败："+ textStatus);
+           },
+           success: function (data) {
+               alert("ajax获取modal数据成功：'data =' "+ data);
+           }
+       });
+    });
+</script>
+
+</html>

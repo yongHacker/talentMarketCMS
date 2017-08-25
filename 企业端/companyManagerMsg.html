@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>校园服务企业端消息中心</title>
+    <!--引入css样式表-->
+    <link rel="icon" href="../../favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/companyMain.css">
+    <!--兼容ie9以下-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--引入js文件-->
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/companyMain.js"></script>
+</head>
+
+<body data-spy="" data-target="#myScrollspy">
+
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div class="col-sm-3 col-md-2 sidebar" id="myScrollspy">
+            <ul class="nav nav-sidebar panel-group" id="accordion">
+                <div class="row">
+                    <a class="index" href="#">
+                        <img class="center-block" src="images/logo-small.png"  alt="">
+                        <h4 class="text-center">管理员后台管理系统</h4>
+                    </a>
+                </div>
+                <li><a  href="./index.html">首页<span class="sr-only">(current)</span></a></li>
+                <!-- 折叠面板 collapse-->
+                <li>
+                    <a href="#collapsePosition" data-toggle="collapse" data-parent="#accordion">职位管理
+                        <span class="pull-right glyphicon glyphicon-menu-right icon"  style="margin-top:2px;"></span>
+                    </a>
+                </li>
+                <ul id="collapsePosition" class="collapse nav">
+                    <li><a href="./positionManager.html">管理职位</a></li>
+                    <li><a href="./positionPublish.html">发布职位</a></li>
+                </ul>
+
+                <li>
+                    <a href="#collapseResume" data-toggle="collapse" data-parent="#accordion">简历管理
+                        <span class="pull-right glyphicon glyphicon-menu-right icon"  style="margin-top:2px;"></span>
+                    </a>
+                </li>
+                <ul id="collapseResume" class="collapse nav">
+                    <li><a href="./resumeManager.html">管理简历</a></li>
+                    <li><a href="./resumeCollection.html">收藏简历</a></li>
+                    <li><a href="./resumeSaw.html">看过的简历</a></li>
+                </ul>
+
+                <li data-parent="#accordion">
+                    <a href="#collapseCompany" data-toggle="collapse" >企业管理
+                        <span class="pull-right glyphicon glyphicon-menu-right icon" style="margin-top:2px;"></span>
+                    </a>
+                </li>
+                <ul id="collapseCompany" class="collapse in">
+                    <li><a href="./companyManagerUser.html">账号设置</a></li>
+                    <li><a href="./companyManagerData.html">企业资料</a></li>
+                    <li class="active"><a href="./companyManagerMsg.html">消息中心</a></li>
+                    <li><a href="./companyManagerComment.html">评论处理</a></li>
+                </ul>
+
+                <li><a  href="./recruitment.html">招聘会</a></li>
+            </ul>
+        </div>
+        <!--内容区-->
+        <div class="col-sm-9  col-md-10  main">
+            <div class="login row">
+                <h3 class=" col-xs-8 col-sm-10"><a href="#" style="color: #989898;">企业管理</a>&nbsp;&raquo;&nbsp;<a href="#">消息中心</a></h3>
+                <!-- 登录区 header-->
+                <div class=" col-xs-4 col-sm-2">
+                    <div class="login-caption">
+                        <a href="#">admin</a>
+                        <span>欢迎您！</span>
+                        <a href="javascript:void(0);" onclick="Logout()">退出</a>
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </div>
+                </div>
+            </div>
+
+                <!--tab标签页-->
+                <ul class="tab-ul nav nav-pills">
+                    <li class="active">
+                        <a href="#system" data-toggle="tab">
+                            系统消息 <span class="badge">6</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#position" data-toggle="tab">
+                            职位消息 <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resume" data-toggle="tab">
+                            简历消息 <span class="badge">1</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <!-- 系统消息tab-->
+                    <div class="tab-pane fade in active" id="system">
+                        <div class="panel-group" id="accordionSys">
+                            <!--panel-one-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#systemOne" data-toggle="collapse" data-parent="#accordionSys">
+                                        你的头像更改已通过1
+                                        <span class="glyphicon glyphicon-menu-down"></span>
+                                        <span class="time">2017-07-07</span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="systemOne">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您的头像更改已于2017年3月1日通过</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-two-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#systemTwo" data-toggle="collapse" data-parent="#accordionSys">
+                                        你的头像更改已通过2 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="systemTwo">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您的头像更改已于2017年3月1日通过</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-three-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#systemThree" data-toggle="collapse" data-parent="#accordionSys">
+                                        你的头像更改已通过3 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="systemThree">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您的头像更改已于2017年3月1日通过</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 系统消息tab结束-->
+
+                    <!-- 职位消息tab-->
+                    <div class="tab-pane fade" id="position">
+                        <div class="panel-group" id="accordionJob">
+                            <!--panel-one-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#positionOne" data-toggle="collapse" data-parent="#accordionJob">
+                                        你发布的职位【淘宝美工】，已提交成功，正在审核1 <span class="delete-msg glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="positionOne">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您发布的职位【淘宝美工】，已于2017年3月1日通过审核</p>
+                                        <p>详细信息可以在后台或人才市场app上查看</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-two-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#positionTwo" data-toggle="collapse" data-parent="#accordionJob">
+                                        你发布的职位【淘宝美工】，已提交成功，正在审核2 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="positionTwo">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您发布的职位【淘宝美工】，已于2017年3月1日通过审核</p>
+                                        <p>详细信息可以在后台或人才市场app上查看</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-three-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#positionThree" data-toggle="collapse" data-parent="#accordionJob">
+                                        你发布的职位【淘宝美工】，已提交成功，正在审核3 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="positionThree">
+                                    <div class="panel-body">
+                                        <p>恭喜您，您发布的职位【淘宝美工】，已于2017年3月1日通过审核</p>
+                                        <p>详细信息可以在后台或人才市场app上查看</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 职位消息tab结束-->
+
+                    <!-- 简历消息tab-->
+                    <div class="tab-pane fade" id="resume">
+                        <div class="panel-group" id="accordionResume">
+                            <!--panel-one-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#resumeOne" data-toggle="collapse" data-parent="#accordionResume">
+                                        你发布的职位【淘宝美工】，收到一份简历1 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="resumeOne">
+                                    <div class="panel-body">
+                                        <p>简历名称【求职美工-张三】，投递张三，联系电话：13800138200</p>
+                                        <a href="#">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-two-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#resumeTwo" data-toggle="collapse" data-parent="#accordionResume">
+                                        你发布的职位【淘宝美工】，收到一份简历2 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="resumeTwo">
+                                    <div class="panel-body">
+                                        <p>简历名称【求职美工-张三】，投递张三，联系电话：13800138200</p>
+                                        <a href="#">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--panel-three-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#resumeThree" data-toggle="collapse" data-parent="#accordionResume">
+                                        你发布的职位【淘宝美工】，收到一份简历3 <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                    <button type="button" class="deletePanel pull-right" style="width: 20px;height: 20px;background-color: red;color:#fff;">
+                                        <span class="delete-msg glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </div>
+                                <div class="panel-collapse collapse" id="resumeThree">
+                                    <div class="panel-body">
+                                        <p>简历名称【求职美工-张三】，投递张三，联系电话：13800138200</p>
+                                        <a href="#">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 简历消息tab结束-->
+
+                <!--tab标签页结束-->
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

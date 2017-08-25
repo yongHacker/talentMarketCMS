@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>校园服务运营系统</title>
+    <!--引入css样式表-->
+    <link rel="icon" href="../../favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/adminMain.css">
+    <!--兼容ie9以下-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--引入js文件-->
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="js/adminMain.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <div class="row">
+                    <a class="index" href="#">
+                        <img class="center-block" src="images/logo-small.png"  alt="">
+                        <h5 class="text-center">管理员后台管理系统</h5>
+                    </a>
+                </div>
+                <li><a  href="./index.html">首页 <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="./company.html">企业管理</a></li>
+                <li ><a href="./position.html">职位管理</a></li>
+                <li><a href="./resume.html">简历管理</a></li>
+                <li><a href="./comment.html">评论管理</a></li>
+                <li><a href="./recruitment.html">招聘会管理</a></li>
+            </ul>
+        </div>
+        <!--侧边栏结束-->
+        <!--内容区-->
+        <div class="col-sm-9  col-md-10  main">
+            <!--header-->
+            <div class="login row">
+                <h3 class=" col-xs-8 col-sm-10">首页</h3>
+                <div class=" col-xs-4 col-sm-2">
+                    <img class="img-responsive pull-left" src="images/icon/avatar.png" alt="头像" style="max-width:30px;">
+                    <div class="login-caption">
+                        <a href="#">admin</a>
+                        <a href="javascript:void(0);" onclick="Logout()">退出</a>
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </div>
+                </div>
+            </div>
+            <!--header结束-->
+            <!--内容区-form-->
+            <div class="row position-filter">
+                <form class="form" action="" role="form">
+                    <div class="form-group  col-xs-12 col-sm-2">
+                        <label for="companyName">公司名称</label>
+                        <input type="text" class="form-control" id="companyName" placeholder="请输入公司名">
+                    </div>
+                    <div class="form-group  col-xs-12 col-sm-2">
+                        <label for="companyIndustry">所属行业</label>
+                        <input type="text" class="form-control" id="companyIndustry" placeholder="请输入行业">
+                    </div>
+                    <div class="form-group  col-xs-12 col-sm-2">
+                        <label for="state" class="">认证状态</label>
+                        <select class="form-control" name="" id="state">
+                            <span class="caret"></span>
+                            <option value="0">全部</option>
+                            <option value="1">已认证</option>
+                            <option value="2">未认证</option>
+                        </select>
+                    </div>
+                    <div class="form-group  col-xs-12 col-sm-2 calendarBox">
+                        <label>创建时间</label>
+                        <input size="16" type="text" value="2012-06-15" class="form_datetime form-control" id="aCompanyCalendar">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-btn">查询</button>
+                </form>
+                <div class="row form-group check-form ">
+                    <div class="checkbox col-xs-2">
+                        <label for="pName"><input id="pName" type="checkbox">全选</label>
+                    </div>
+                    <button type="button" class="btn btn-primary checkbox-btn">操作</button>
+                    <button type="button" class="btn btn-danger checkbox-btn">操作</button>
+                </div>
+
+            </div>
+            <!--内容区-form结束-->
+            <!--内容区-table-->
+            <div class="table-responsive ">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>公司名称</th>
+                        <th>行业</th>
+                        <th>认证状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td align="left"><label for="p-Name0"><input type="checkbox" id="p-Name0">广州网软志成信息科技有限公司</label></td>
+                        <td>计算机</td>
+                        <td style="color:#67affe">已认证 </td>
+                        <td>2017-07-17</td>
+                        <td><button type="button" class="btn btn-primary companySaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="p-Name1"><input  type="checkbox" id="p-Name1">广州网软志成信息科技有限公司</label></td>
+                        <td>机械制造</td>
+                        <td style="color:red">未认证 </td>
+                        <td>2017-07-17</td>
+                        <td><button type="button" class="btn btn-primary companySaw" data-toggle="modal" data-target="#myModal">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="p-Name2"><input  type="checkbox" id="p-Name2">广州网软志成信息科技有限公司</label></td>
+                        <td>机械制造</td>
+                        <td style="color:#67affe">已认证 </td>
+                        <td>2017-07-17</td>
+                        <td><button type="button" class="btn btn-primary companySaw">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="p-Name3"><input  type="checkbox" id="p-Name3">广州网软志成信息科技有限公司</label></td>
+                        <td>机械制造</td>
+                        <td style="color:#67affe">已认证 </td>
+                        <td>2017-07-17</td>
+                        <td><button type="button" class="btn btn-primary companySaw">查看</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--内容区-table结束-->
+            <!--内容区-分页-->
+            <div class="pagination pull-right">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">上一页</a></li>
+                <li class="active"><a  href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">下一页</a></li>
+                <li><a href="#">末页</a></li>
+                <span>共20页，到第&nbsp;<input class="" type="number" style="width: 30px;height: 30px;"></input>&nbsp;页</span>
+                <button class="btn btn-default">提交</button>
+            </div>
+            <!--内容区-分页结束-->
+        </div>
+        <!--内容区结束-->
+    </div>
+</div>
+
+<!--modal弹窗-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">企业管理</h4>
+            </div>
+            <!--media-body-->
+            <div class="modal-body">
+                <!--企业基本资料-->
+                <div class="row">
+                    <h4>企业基本资料</h4>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>企业名称:</span>
+                        <span>东莞市嘉讯云计算有限公司</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>创建时间:</span>
+                        <span>2017-1-1</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>所在城市:</span>
+                        <span>东莞</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>注册资金:</span>
+                        <span>300万</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>企业性质:</span>
+                        <span>股份制企业</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>企业规模:</span>
+                        <span>100人以下</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>所属行业:</span>
+                        <span>计算机行业</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>工商注册号:</span>
+                        <span>634687465</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>统一信用代码:</span>
+                        <span>231354878989</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>组织机构代码:</span>
+                        <span>zfdafdffas</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>登记机关:</span>
+                        <span>XXXXXXXXXXXXX</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>纳税人识别号:</span>
+                        <span>zxvafa</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <span>固定电话:</span>
+                        <span>0769-8888888</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <span>公司邮箱:</span>
+                        <span>123sfa@163.com</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>公司地址:</span>
+                        <span>广东省东莞市松山湖科技10路东莞市嘉讯云计算有限公司</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>公司福利:</span>
+                        <span>xxxxxxxxxxxxxxxxxxXXXXxcvdafadsfadsfasdXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1东莞市嘉讯云计算有限公司</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>公司简介:</span>
+                        <span>xxxxxxxxxxxxxxxxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1市嘉讯云计算有限公司</span>
+                    </div>
+                </div>
+                <!--企业基本资料结束-->
+                <hr>
+                <!--企业img-->
+                <div class="row">
+                    <div class="">
+                        <h4>企业logo</h4>
+                        <img src="images/logo-small.png" class="img-responsive img-thumbnail" alt="企业logo" style="background-color: #4faaff">
+                    </div>
+                    <div class="" style="">
+                        <h4>营业执照</h4>
+                        <img src="images/logo-lg.png" class="img-responsive img-thumbnail" alt="企业营业执照" style="background-color: #4faaff">
+                    </div>
+                </div>
+                <!--企业img结束-->
+                <hr>
+                <!--hr信息-->
+                <div class="row">
+                    <h4>HR信息</h4>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>hr姓名:</span>
+                        <span>张三</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>hr手机:</span>
+                        <span>1313131313131</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <span>hr邮箱:</span>
+                        <span>122@163.com</span>
+                    </div>
+                </div>
+                <!--hr信息结束-->
+                <hr>
+            </div>
+            <!--media-body结束-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success pass" data-dismiss="modal" onclick="Pass()">通过 </button>
+                <button type="button" class="btn btn-danger fail" data-dismiss="modal" onclick="Fail()">不通过 </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal弹窗结束-->
+
+</body>
+
+<script>
+    $(function () {
+        $("#myModal").modal({
+            show: false,
+            backdrop: "static"
+        });
+    });
+
+    $(".companySaw").click(function () {
+        $.ajax({
+            type: "GET",
+            async: "false",
+            url: "",
+            dataType: "json",
+            error: function (XMLHttpRequest,textStatus,errorThrown) {
+                alert("ajax获取modal数据失败："+ textStatus);
+            },
+            success: function (data) {
+                alert("ajax获取modal数据成功：'data'= "+data);
+            }
+        });
+    });
+
+</script>
+
+</html>

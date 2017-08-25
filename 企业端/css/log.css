@@ -1,0 +1,120 @@
+*{margin: 0;padding:0;}
+
+/*
+整体布局
+*/
+.bg{
+    position: relative;
+    z-index: 1;
+    width: 1920px;
+    height: 450px;
+}
+.logo{
+    position: relative;
+    z-index: 2;
+    margin-top:-250px;
+    margin-bottom: 80px;
+}
+.container{
+    position: relative;
+    z-index: 3;
+    margin-top:-150px;
+    padding-bottom: 100px;
+}
+
+/*
+login.html
+*/
+.form-box{
+    width: 480px;
+    height: 450px;
+    background-color: #fff;
+    border:1px solid #efefef;
+    box-shadow: #efefef 0 0 2px;
+    margin-top:-40px;
+}
+.form-signin{
+    padding:20px 65px;
+}
+.form-signin-header{
+    padding-bottom: 30px;
+}
+.form-signin-header .welcome{
+    color: #1386f1;
+    font-size: 28px;
+    font-weight: bold;
+}
+.form-signin-header .text{
+    font-size: 22px;
+    font-weight: bold;
+    color:#7d7d7d;
+}
+.form-signin input{
+    margin-bottom: 10px;
+}
+.inputCode{
+    height: 40px;
+}
+.code{
+    height:40px;
+    width:80px;
+    text-align:center;
+    line-height: 40px;
+    font-size: 18px;
+}
+.code:hover{
+    cursor:pointer;
+}
+.checkbox{
+    margin-top: 0px;
+    margin-left:20px;
+}
+.forget{
+    margin-top: -3px;
+}
+.login{
+    height: 50px;
+    border-radius: 20px;
+    background-color: #2590f2;
+    font-family: "微软雅黑";
+    font-size: 22px;
+}
+.register{
+    margin: 0 auto;
+    width: 150px;
+}
+.footer{
+    width:500px;
+    margin:0 auto;
+}
+
+/*
+register.html
+*/
+.register-form-box{
+    height:450px;
+}
+.register-form-box .form-group{
+    margin-top:-20px;
+}
+.register-form-box #inputCode{
+    position: relative;
+}
+.register-form-box #inputCode + img{
+    position: absolute;
+    right:-100px;
+    top:0;
+}
+.register-form-box .checkbox{
+    margin-top:-15px;
+    margin-left:40px;
+}
+.register-form-box .bg{
+    height:650px;
+}
+/*错误提示信息*/
+.error{
+    color:orangered;
+    float: right;
+    margin-top:-5px;
+}

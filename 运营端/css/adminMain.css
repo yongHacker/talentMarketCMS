@@ -1,0 +1,216 @@
+/*commentCss*/
+*{ margin:0;padding:0;}
+.calendarBox{
+    position: relative;
+}
+.calendarBox span{
+    position: absolute;
+    top:60%;
+    right:10%;
+}
+.container-fluid{
+    font-size: 12px;
+}
+.container-fluid h2{
+    font-size:18px;
+}
+.container-fluid h3{
+    font-size:16px;
+}
+.container-fluid h4{
+    font-size:14px;
+}
+/*commentCss结束*/
+
+/*公共左侧导航栏*/
+.sidebar{
+    padding:0;
+}
+.nav{
+    background-color:#132140;
+    text-align:center;
+    font-weight:bold;
+    padding-bottom: 100px;
+}
+.index{
+    display: block;
+    padding:20px;
+    border-bottom:1px solid #273c69 ;
+    margin:0 15px 10px 15px;
+}
+.index h5{
+    color: #fff;
+}
+.nav li{
+    margin:20px 0;
+}
+.nav li a{
+    color:#7182a0;
+}
+.nav li:hover a{
+    color:#fff;
+    background-color:#273c69;
+    border-left:4px solid #4faaff;
+}
+.nav li.active a{
+    color:#fff;
+    background-color:#273c69;
+    border-left:4px solid #4faaff;
+}
+/*公共左侧导航栏结束*/
+
+/*公共header*/
+.login{
+    border-bottom: 1px solid #ccc;
+    margin-bottom:20px;
+    margin-top:10px;
+}
+.login h3{
+    margin-top:8px;
+}
+.login .login-caption{
+    width:200px;
+    margin-top:5px;
+}
+.login-caption a{
+    margin-left:10px;
+}
+/*公共header结束*/
+
+/*公共table样式*/
+.position-filter .form .form-btn{
+    margin-top:22px;
+}
+.table{
+    border:1px solid #ececed;
+}
+.table thead{
+    background-color: #dddddd;
+}
+.table th{
+    text-align: center;
+}
+.table td{
+    text-align: center;
+}
+.table label{
+    font-weight: normal;
+}
+.position-filter .check-form{
+    margin-top:20px;
+}
+.position-filter .checkbox{
+    width: 80px;
+    margin-left:15px;
+}
+.position-filter .checkbox-btn{
+    margin-right: 10px;
+}
+/*公共table样式*/
+
+/*公共弹窗样式*/
+.modal-header{
+    background-color:#132140;
+    color:#fff;
+}
+.modal-header .glyphicon-remove{
+    color:#fff;
+}
+.modal-title{
+    text-align:center;
+}
+.modal-body{
+    padding:0;
+    padding-left:20px;
+    height:400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.modal-footer{
+    text-align: center;
+}
+.modal-body h4{
+    margin-left: 10px;
+    padding-left: 5px;
+    border-left:4px solid #56ADFF;
+    font-weight: bold;
+}
+.modal-body .row{
+    margin-bottom: 5px;
+}
+.modal-body span:nth-child(1){
+    color:#B5B5B5;
+}
+.modal-body span:nth-child(2){
+
+}
+.modal-body img{
+    margin-left: 20px;
+}
+.modal-footer .btn{
+    color: #fff;
+    padding:5px 20px;
+}
+.modal-footer .btn.pass{
+    background-color: #4F65A4;
+}
+.modal-footer .btn.fail{
+    background-color: #E45A5A;
+    padding:5px 12px;
+}
+
+/*职位管理position.html*/
+.modal-body .info-title{
+    height:30px;
+    line-height: 30px;
+    font-size:12px;
+    margin-left: -20px;
+    margin-bottom: 0;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+.modal-body .info-body{
+    height:30px;
+    line-height: 30px;
+    font-size:12px;
+    margin-left: -20px;
+    margin-bottom: 0;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+/*职位管理结束position.html*/
+
+/*招聘会管理recruitment.html*/
+.modal-body form{
+    padding:50px 0;
+}
+/*招聘会管理结束recruitment.html*/
+
+/*公共弹窗样式结束*/
+
+/*index.html*/
+.panel-body{
+    padding-top:0;
+    padding-left:80px;
+}
+.panel .media{
+    margin-top:15px;
+    padding:20px;
+}
+.panel .media img{
+    max-width:60px;
+}
+/*index.html结束*/
+
+
+/*comment.html*/
+.table{
+    table-layout: fixed;
+}
+.table .comment-content{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+/*comment.html结束*/
